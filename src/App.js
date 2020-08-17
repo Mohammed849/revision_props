@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Day from './components/Day';
+import 'bootstrap/dist/css/bootstrap.min.css';
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Day dayName='thursday' dayNumber='9' monthName='July' />
+        <Day dayName='Friday' dayNumber='8' monthName='July' />
+        <Day dayName='saturday' dayNumber='10' monthName='July' />
+        {/* Si on ne donne pas des valuers il prend ses valeurs par defauls  */}
+        <Day />
+      </div>
+    );
+  }
 }
-
 export default App;
